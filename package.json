@@ -1,0 +1,18 @@
+{
+  "name": "demandity",
+  "version": "1.0.0",
+  "description": "Experimental form for preview of your demands",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --env.dev --hot"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/davidrus/demandity#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^2.2.4",
+    "typescript": "^2.0.8",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
