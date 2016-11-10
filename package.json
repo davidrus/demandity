@@ -14,21 +14,28 @@
     "@types/react": "^0.14.47",
     "@types/react-dom": "^0.14.18",
     "awesome-typescript-loader": "^2.2.4",
+    "bootstrap-webpack": "0.0.5",
     "css-loader": "^0.25.0",
+    "exports-loader": "^0.6.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
+    "imports-loader": "^0.6.5",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "progress-bar-webpack-plugin": "^1.9.0",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "style-loader": "^0.13.1",
     "typescript": "^2.0.8",
+    "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.25",
     "webpack-config-utils": "2.0.0",
     "webpack-dev-server": "2.1.0-beta.8"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-hot-loader": "^3.0.0-beta.6"
+    "react-dom": "^15.3.2"
   }
 }
