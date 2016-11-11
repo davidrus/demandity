@@ -1,10 +1,11 @@
-import * as React from 'react'
-import { StatelessComponent } from 'react';
+import * as React from 'react';
 
-export const NewDemands: StatelessComponent<any> = () => {
+export class NewDemands extends React.Component<{}, {}> {
 
-  return (
-    <h1>NewDemands</h1>
-  )
+  render () {
+    return (
+      <h1>NewDemands</h1>
+    )
+  }
 
 }

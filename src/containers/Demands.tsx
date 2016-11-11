@@ -1,10 +1,37 @@
 import * as React from 'react'
-import { StatelessComponent } from 'react';
 
-export const Demands: StatelessComponent<any> = () => {
+export class Demands extends React.Component<{},{}> {
 
-  return (
-    <h1>Demands</h1>
-  )
+
+  render() {
+
+    const demands = [
+      {
+        name:'one',
+        description:'desc'
+      },
+      {
+        name:'two',
+        description:'desc'
+      }
+
+    ];
+    var demandItems = demands.map((demand, index) => {
+      return (
+        <li key={index}>{demand.name}</li>
+      );
+    }, this);
+
+
+    return (
+      <div>
+        <h1>Demands</h1>
+
+        <ul>
+          {demandItems}
+        </ul>
+      </div>
+    )
+  }
 
 }
