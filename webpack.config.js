@@ -100,20 +100,20 @@ module.exports = (env) => {
       // Deduplicate node modules dependencies
       ifProd(new webpack.optimize.DedupePlugin()),
 
-      // // Default webpack build options
-      // ifProd(new webpack.LoaderOptionsPlugin({
-      //   debug: false
-      // })),
+      // Default webpack build options
+      ifProd(new webpack.LoaderOptionsPlugin({
+        debug: false
+      })),
 
-      // // Uglify bundles
-      // ifProd(new webpack.optimize.UglifyJsPlugin({
-      //   compress: {
-      //     warnings: false,
-      //   },
-      //   output: {
-      //     comments: false
-      //   }
-      // }))
+      // Uglify bundles
+      ifProd(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false,
+        },
+        output: {
+          comments: false
+        }
+      }))
 
     ])
   }

@@ -10,9 +10,6 @@
   "license": "ISC",
   "homepage": "https://github.com/davidrus/demandity#readme",
   "devDependencies": {
-    "@types/node": "^6.0.46",
-    "@types/react": "^0.14.47",
-    "@types/react-dom": "^0.14.18",
     "awesome-typescript-loader": "^2.2.4",
     "bootstrap-webpack": "0.0.5",
     "css-loader": "^0.25.0",
@@ -36,6 +33,7 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.1",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-router": "^3.0.0"
   }
 }
