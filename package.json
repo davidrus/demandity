@@ -4,7 +4,7 @@
   "description": "Experimental form for preview of your demands",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --env.dev --hot"
+    "start": "webpack-dev-server --env.dev --hot --history-api-fallback"
   },
   "author": "",
   "license": "ISC",

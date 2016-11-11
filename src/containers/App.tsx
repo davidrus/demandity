@@ -1,38 +1,26 @@
+// modules/App.js
 import * as React from 'react'
-import { Router, Route, Link, browserHistory } from 'react-router';
-import { About } from './About';
-import { Demands } from './Demands';
+import { Link } from 'react-router'
 
-export const App = React.createClass({
-
+export const App = React.createClass( {
   render() {
-
     return (
-      <Router history={browserHistory}>
-        <Route path="/">
-          <nav className="navbar navbar-fixed-top navbar-dark bg-inverse">
-            <a className="navbar-brand" href="#">Demandity</a>
-            <ul className="nav navbar-nav">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/demands">Demands</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
-              </li>
-            </ul>
-          </nav>
+      <div>
+        <nav className="navbar navbar-dark bg-inverse">
+          <Link className="navbar-brand" to="/" onlyActiveOnIndex activeClassName="active">Demandity</Link>
+          <ul className="nav navbar-nav">
+            <li><Link to="/demands" activeClassName="active">Demands</Link></li>
+            <li><Link to="/new-demand" activeClassName="active">New demand +</Link></li>
+            <li><Link to="/about" activeClassName="active">About</Link></li>
+          </ul>
+        </nav>
 
-          <Route path="#/demands" component={Demands}/>
-          <Route path="#/about" component={About}/>
-          <Route path="*" component={About}/>
-        </Route>
-
-      </Router>
-
-
-
+        <div className="container">
+          <div className="starter-template">
+            {this.props.children}
+          </div>
+        </div>
+      </div>
     )
   }
-
-});
-
+} )
