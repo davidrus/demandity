@@ -1,10 +1,9 @@
-require('bootstrap-webpack!../bootstrap.config.js');
+import { AppContainer } from 'react-hot-loader';
 
 import * as React from 'react';
 import { render } from 'react-dom';
 import { AppRouter } from './router';
-
-const { AppContainer } = require('react-hot-loader');
+import 'office-ui-fabric-react/dist/css/fabric.css'
 
 // Get the root element from the HTML
 const rootEl = document.getElementById('app');
@@ -22,7 +21,7 @@ render(
 
 // Handle hot reloading requests from Webpack
 if (module.hot) {
-  module.hot.accept('./containers/App', () => {
+  module.hot.accept(['./containers/App'], () => {
     // If we receive a HMR request for our Menu container, then reload it using require (we can't do this dynamically with import)
     const NextApp = require('./containers/App');
 

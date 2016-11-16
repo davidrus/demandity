@@ -1,35 +1,64 @@
 import * as React from 'react'
+import { DocumentCard, DocumentCardPreview, DocumentCardTitle, DocumentCardActivity } from 'office-ui-fabric-react/lib/DocumentCard';
 
-export class Demands extends React.Component<{},{}> {
 
+interface IDemandProps {
+}
 
-  render() {
+interface IDemandState {
+  demands: [Demand]
+}
 
-    const demands = [
+type Demand = {
+  name: string,
+  description: string
+}
+
+export class Demands extends React.Component<IDemandProps,IDemandState> {
+
+  state: IDemandState = {
+    demands: null
+  };
+
+  constructor( props: any ) {
+
+    super(props);
+
+    this.state.demands = [
       {
-        name:'one',
-        description:'desc'
+        name: 'one',
+        description: 'desc'
       },
       {
-        name:'two',
-        description:'desc'
+        name: 'two',
+        description: 'desc'
       }
 
     ];
-    var demandItems = demands.map((demand, index) => {
+
+  }
+
+  render() {
+
+    var demandItems = this.state.demands.map( ( demand, index ) => {
       return (
-        <li key={index}>{demand.name}</li>
+        <DocumentCard key={index}>
+          <h4>{demand.name}</h4>
+          <p className="card-text">{demand.description}</p>
+        </DocumentCard>
       );
-    }, this);
+    }, this );
 
 
     return (
-      <div>
-        <h1>Demands</h1>
-
-        <ul>
-          {demandItems}
-        </ul>
+      <div className="album text-muted">
+        <div className="container">
+          <div className="row">
+            <div className="card">
+              {demandItems}
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
